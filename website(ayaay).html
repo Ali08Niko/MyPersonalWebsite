@@ -7,15 +7,18 @@
     <meta name="description" content="Personal website showcasing her portfolio, projects, and contact information.">
     <title>Aaliyah Aya-ay | BSIS Freshman</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
 <body id="top">
 <!-- ======= Header / Navigation ======= -->
     <header class="top-header">
         <a class="header" href="#home"><span>Ali's</span> Little Corner✦</a>
-        <nav aria-label="Main navigation">
-            <a href="#about">About</a>
-            <a href="#education">Education</a>
-            <a href="#contact">Contact</a>
+        <nav class="navbar">
+            <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+            </ul>
         </nav>
         <button class="music-btn" id="musicButton" type="Button">♫ Play a tune</button>
     </header>
@@ -29,8 +32,14 @@
                 <p class="hero-copy">Welcome To My Little Corner of the Internet — A Cozy Space All About Me , My Interests, and My Journey Through Life.</p>
                 <div class="hero-actions">
                     <a class="primary" href="#about">GET TO KNOW ME ↗</a>
-                    <button class="secondary" id="surpriseButton" type="button">A LITTLE SURPRISE ✦</button>
                 </div>
+                <div class="surprise-bubble" id="surpriseBubble">
+                    <span class="bubble-icon">✦</span>
+                    <p id="surpriseText">A little message for you!</p>
+                </div>
+                <button class="secondary" id="surpriseButton" type="button">
+                    A LITTLE SURPRISE ✦
+                </button>
             </div>
              </div>
             <figure class="hero-image">
