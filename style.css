@@ -1,3 +1,4 @@
+/*FONTS*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @font-face {
   font-family: 'snoopy_reg-webfont';
@@ -21,6 +22,7 @@
   font-style: normal;
 }
 
+/*COLOR PALLET*/
 :root {
   --primary-color: #f3e5cc;
   --secondary-color: #c4483b;
@@ -60,6 +62,7 @@ button:hover {
   background-color: var(--color-1);
 }
 
+/*HEADER*/
 .top-header {
     display: flex;
     justify-content: space-between;
@@ -160,10 +163,11 @@ button:hover {
     }
 }
 
+/*MAIN PAGE*/
 .hero {
     min-height: auto;
     display: grid;
-    grid-template-columns: 1.2fr 0.8;
+    grid-template-columns: 1.2fr 0.8fr;
     align-items: center;
     gap: 50px;
 
@@ -274,6 +278,8 @@ button:hover {
     color: #A34438;
     transform: translateY(-4px);
 }
+
+/*IMAGE*/
 .hero-image {
     margin: 0;
     position: relative;
@@ -322,7 +328,8 @@ button:hover {
     }
 }
 
-.surprise-button {
+/*SURPRISE BUTTON*/
+.surprise-bubble {
     display: none;
     position: relative;
 
@@ -332,11 +339,11 @@ button:hover {
     margin-top: 30px;
     padding: 20px;
 
-    background: #FFF8ED;
-    border: 2px solid #B69A7A;
+    background: #fff2e9;
+    border: 2px solid #c47b45;
     border-radius: 18px;
 
-    box-shadow: 4px 5px 0 #D8BFA2;
+    box-shadow: 4px 5px 0 #ffacac;
 
     z-index: 10;
 }
@@ -346,9 +353,10 @@ button:hover {
     animation: bubbleAppear 0.4s ease;
 }
 
-.surprise-button p {
+.surprise-bubble p {
     margin: 0;
-    color: #563C2E;
+    color: #333333;
+
     font-family: monospace;
     font-size: 15px;
     line-height: 1.6;
@@ -356,7 +364,7 @@ button:hover {
 
 .bubble-icon {
     display: block;
-    color: #A34438;
+    color: #c4483b;
     font-size: 20px;
     margin-bottom: 8px;
 }
@@ -373,5 +381,251 @@ button:hover {
     }
 }
 
+/*ABOUT SECTION*/
+#about {
+    padding: 90px 10%;
+    background-color: #e9cba9;
+    position: relative;
+    overflow: hidden;
+}
+
+#about .section-heading {
+    text-align: left;
+    margin-bottom: 55px;
+}
+
+#about .sec h2 {
+    font-family: monospace;
+    font-size: clamp(32px, 4vw, 48px);
+    color: #563C2E;
+    margin: 0 0 12px;
+}
+
+#about .section-note {
+    display: inline-block;
+    font-family: monospace;
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #c4483b;
+}
+
+#about .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+    max-width: 1100px;
+    margin: auto;
+    align-items: stretch;
+}
+
+#about .panel {
+    position: relative;
+    background-color: #fff2e9;
+    padding: 40px;
+    border: 2px solid #B69A7A;
+    border-radius: 8px;
+    box-shadow: 7px 7px 0 #D8BFA2;
+    transition: transform 0.3s ease, box-shodow 0.3s ease;
+}
+
+#about .panel:first-child {
+    transform: rotate(-1.5deg);
+}
+
+#about .panel:last-child {
+    transform: rotate(1.5deg);
+}
+
+#about .panel:hover {
+    transform: translateY(-7px) rotate(0deg);
+    box-shadow: 9px 12px #D8BFA2;
+}
+
+#about .panel h3 {
+    font-family: monospace;
+    font-size: 23px;
+    color: #A34438;
+    margin: 0 0 20px;
+    line-height: 1.4;
+}
+
+#about .panel p {
+    font-family: monospace;
+    font-size: 16px;
+    line-height: 1.9;
+    color: #806A56;
+    margin: 0;
+}
+
+#about .panel:first-child::before {
+    content: "✦"; 
+    position: absolute;
+    top: -20px;
+    right: 20px;
+    font-size: 25px;
+    color: #c4483b;
+}
+
+#about .panel:last-child::before {
+    content: "♡";
+    position: absolute;
+    bottom: 12px;
+    right: 20px;
+    font-size: 30px;
+    color: #c4483b;
+}
+
+#about .tag-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+#about .tag {
+    display: inline-block;
+    background-color: #ead9c3;
+    color: #78372f;
+    border: 1px solid #c47b45;
+    border-radius: 20px;
+    padding: 8px 16px;
+    font-family: monospace;
+    font-size: 12px;
+    transition: all 0.3s ease;
+}
+
+#about .tag:hover {
+    background-color: #a34438;
+    color: #fff8ed;
+    transform: translateY(-3px);
+}
+
+/*EDUCATION*/
+#education {
+    padding: 90px 10%;
+    background-color: #fff2e9;
+    position: relative;
+}
+
+#education .section-heading {
+    text-align: center;
+    margin-bottom: 65px;
+}
+
+#education .section-heading h2 {
+    font-family: monospace;
+    font-size: clamp(32px, 4vw, 48px);
+    color: #563c2e;
+    margin-bottom: 12px;
+}
+
+#education .section-note {
+    font-family: monospace;
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #c4483b;
+}
+
+.education-subtitle {
+    font-family: Georgia, serif;
+    color: #806a56;
+    margin-top: 18px;
+}
+
+#education .timeline {
+    position: relative;
+    max-width: 850px;
+    margin: auto;
+}
+
+#education .timeline::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 25px;
+    width: 3px;
+    background: #c47b45;
+}
+
+#education .timeline-item {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    margin-bottom: 45px;
+}
+
+#education .timeline-dot {
+    position: relative;
+    z-index: 2;
+    min-width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #c4483b;
+    color: #fff8ed;
+    border: 4px solid #fff2e9;
+    border-radius: 50%;
+    font-size: 23px;
+    box-shadow: 0 0 0 2px #c47b45;
+}
+
+#education .timeline-card {
+    flex: 1;
+    padding: 28px 35px;
+    background: #f3e5cc;
+    border: 2px solid #b69a7a;
+    border-radius: 8px;
+    box-shadow: 6px 6px 0 #d8bfa2;
+    transition: all 0.3s ease;
+}
+
+#education .timeline-card:hover {
+    transform: translateX(8px);
+    box-shadow: 9px 9px 0 #d8bfa2;
+}
+
+#education .year {
+    display: inline-block;
+    background: #a34438;
+    color: #fff8ed;
+    padding: 7px 15px;
+    border-radius: 20px;
+    font-family: monospace;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+#education .school-level {
+    display: block;
+    margin-top: 18px;
+    font-family: monospace;
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: #c47b45;
+}
 
 
+#education .timeline-card h3 {
+    font-family: monospace;
+    color: #563c2e;
+    font-size: 23px;
+    margin: 8px 0;
+}
+
+#education .timeline-card h4 {
+    color: #a34438;
+    font-family: Georgia, serif;
+    font-size: 16px;
+    margin: 0 0 12px;
+}
+
+#education .timeline-card p {
+    color: #806a56;
+    font-family: Georgia, serif;
+    font-size: 14px;
+    line-height: 1.7;
+    margin: 0;
+}
