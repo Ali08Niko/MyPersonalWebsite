@@ -384,7 +384,7 @@ button:hover {
 /*ABOUT SECTION*/
 #about {
     padding: 90px 10%;
-    background-color: #e9cba9;
+    background-color: #f3e5cc;
     position: relative;
     overflow: hidden;
 }
@@ -833,11 +833,88 @@ button:hover {
     margin: 0;
 }
 
+/*PORTFOLIO*/
+
+#portfolio {
+    padding: 85px 8%;
+    background-color: #f3e5cc;
+    text-align: center;
+}
+
+.portfolio-container {
+    max-width: 850px;
+    margin: auto;
+}
+
+.portfolio-label {
+    color: #c4483b;
+    font-family: monospace;
+    font-size: 13px;
+    letter-spacing: 3px;
+}
+
+#portfolio h2 {
+    color: #563C2E;
+    font-family: monospace;
+    font-size: clamp(32px, 4vw, 48px);
+    margin: 12px 0 35px;
+}
+
+.portfolio-card {
+    background-color: #fff2e9;
+    border: 2px dashed #b98b68;
+    border-radius: 20px;
+    padding: 55px 30px;
+    box-shadow: 7px 7px 0 rgba(86, 60, 46, 0.15);
+}
+
+.portfolio-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75px;
+    height: 75px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    background-color: #ffacac;
+    color: #563C2E;
+    font-size: 35px;
+}
+
+.portfolio-card h3 {
+    color: #563C2E;
+    font-family: Georgia, serif;
+    font-size: clamp(22px, 3vw, 30px);
+    margin-bottom: 18px;
+}
+
+.portfolio-card p {
+    color: #765744;
+    line-height: 1.8;
+    max-width: 550px;
+    margin: 0 auto 15px;
+}
+
+.portfolio-note {
+    font-style: italic;
+}
+
+.portfolio-decoration {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 20px;
+    background-color: #f3e5cc;
+    border-radius: 30px;
+    color: #c4483b;
+    font-family: Georgia, serif;
+    font-style: italic;
+}
+
 /*CONTACT*/
 
 #contact {
     padding: 90px 10%;
-    background-color: #f3e5cc;
+    background-color: #f5ebdd;
     position: relative;
 }
 
@@ -931,8 +1008,6 @@ button:hover {
     margin: 25px 0;
 }
 
-/*contact details*/
-
 .contact-item {
     display: flex;
     align-items: flex-start;
@@ -993,8 +1068,6 @@ button:hover {
     font-style: italic;
     margin-top: 30px;
 }
-
-/*Decorations*/
 
 .contact-decoration {
     text-align: center;
@@ -1305,4 +1378,18 @@ button:hover {
 html, body {
     max-width: 100%;
     overflow-x: hidden;
+}
+@media (max-width: 768px) {
+    #portfolio {
+        padding: 60px 20px;
+    }
+
+    .portfolio-card {
+        padding: 40px 20px;
+    }
+
+    .portfolio-label {
+        font-size: 11px;
+        letter-spacing: 2px;
+    }
 }
