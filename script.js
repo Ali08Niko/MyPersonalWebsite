@@ -102,21 +102,73 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     const albumToggle = document.getElementById("albumToggle");
-    const photoGallery = document.getElementById("photoGallery");
+    const favGallery = document.getElementById("favGallery");
 
-    if (albumToggle && photoGallery) {
+    if (albumToggle && favGallery) {
         albumToggle.addEventListener("click", function () {
 
-            const isOpening = photoGallery.hidden;
+            const isOpening = favGallery.hidden;
 
-            photoGallery.hidden = !isOpening;
+            favGallery.hidden = !isOpening;
 
             albumToggle.setAttribute("aria-expanded", String(isOpening));
 
             albumToggle.textContent = isOpening
-                ? "♡ Close My Photo Album"
-                : "♡ Open My Photo Album";
+                ? "♡ Close My Favorites Album"
+                : "♡ Open My Favorites Album";
         });
     }
 
 });
+
+// favorites album
+
+const galleryImages = document.querySelectorAll(".gallery-photo img");
+const lightbox = document.getElementById("lightbox");
+const lightboxImage = document.getElementById("lightboxImage");
+const lightboxCaption = document.getElementById("lightboxCaption");
+const lightboxClose = document.getElementById("lightboxClose");
+
+galleryImages.forEach(function (image) {
+
+    image.addEventListener("click", function () {
+
+        const photo = this;
+        const caption = photo.closest(".gallery-photo")
+            .querySelector("figcaption");
+
+        lightboxImage.src = photo.src;
+        lightboxImage.alt = photo.alt;
+        lightboxCaption.textContent = caption
+            ? caption.textContent
+            : "";
+
+        lightbox.classList.add("active");
+        lightbox.setAttribute("aria-hidden", "false");
+
+        document.body.style.overflow = "hidden";
+    });
+
+});
+
+lightboxClose.addEventListener("click", closeLightbox);
+
+lightbox.addEventListener("click", function (event) {
+    if (event.target === lightbox) {
+        closeLightbox();
+    }
+});
+
+document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") {
+        closeLightbox();
+    }
+});
+
+function closeLightbox() {
+    lightbox.classList.remove("active");
+    lightbox.setAttribute("aria-hidden", "true");
+    lightboxImage.src = "";
+
+    document.body.style.overflow = "";
+}

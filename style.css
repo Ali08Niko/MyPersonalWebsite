@@ -501,7 +501,7 @@ button:hover {
 }
 
 /*Photo button*/
-.photo-album-entry {
+.fav-album-entry {
     text-align: center;
     margin: 34px auto 8px;
 }
@@ -531,7 +531,7 @@ button:hover {
     font-size: 0.9rem;
 }
 
-.photo-gallery {
+.fav-gallery {
     margin: 28px auto 10px;
     padding: 30px;
     max-width: 1050px;
@@ -542,7 +542,7 @@ button:hover {
     animation: albumOpen 0.35s ease both;
 }
 
-.photo-gallery[hidden] {
+.fav-gallery[hidden] {
     display: none;
 }
 
@@ -636,6 +636,72 @@ button:hover {
         font-size: 13px;
     }
 }
+
+.gallery-photo img {
+    cursor: zoom-in;
+}
+
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    inset: 0;
+    background: rgba(35, 25, 20, 0.92);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px 20px;
+}
+
+.lightbox.active {
+    display: flex;
+}
+
+.lightbox img {
+    max-width: 85%;
+    max-height: 75vh;
+    object-fit: contain;
+    border: 8px solid #fff2e9;
+    border-radius: 5px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+    animation: zoomIn 0.25s ease;
+}
+
+.lightbox p {
+    color: #fff2e9;
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 18px;
+    margin-top: 18px;
+    text-align: center;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    background: none;
+    border: none;
+    color: #fff2e9;
+    font-size: 42px;
+    cursor: pointer;
+}
+
+.lightbox-close:hover {
+    color: #ffacac;
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.85);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
 
 /*EDUCATION*/
 #education {

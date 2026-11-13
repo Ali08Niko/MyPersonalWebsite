@@ -81,42 +81,49 @@
                 </article>
             </div>
 
-            <div class="photo-album-entry">
+            <div class="fav-album-entry">
                 <button class="album-toggle" id="albumToggle" type="button"
-                    aria-expanded="false" aria-controls="photoGallery">
-                    ♡ Open My Photo Album
+                    aria-expanded="false" aria-controls="favGallery">
+                    ♡ Open My Favorites Album
                 </button>
-                <p class="album-hint">A little collection of moments I want to keep.</p>
+                <p class="album-hint">A little collection of my favorite things.</p>
             </div>
 
-            <div class="photo-gallery" id="photoGallery" hidden>
+            <div class="fav-gallery" id="favGallery" hidden>
                 <div class="gallery-heading">
-                    <span class="gallery-kicker">A FEW LITTLE MEMORIES</span>
-                    <h3>My Memory Book ♡</h3>
+                    <span class="gallery-kicker">A FEW LITTLE THINGS I LOVE</span>
+                    <h3>My Favorites's Book ♡</h3>
                     <p>Little snapshots of the things that make me smile.</p>
                 </div>
 
                 <div class="gallery-grid">
                     <figure class="gallery-photo">
-                        <img src="images/gallery-1.jpg" alt="A favorite memory">
-                        <figcaption>little moments ♡</figcaption>
+                        <img src="images/fav_musical.jpg" alt="My Favorite Musical">
+                        <figcaption>Best Musical Ever ♡</figcaption>
                     </figure>
 
                     <figure class="gallery-photo">
-                        <img src="images/gallery-2.jpg" alt="A fun day or outing">
-                        <figcaption>days to remember</figcaption>
+                        <img src="images/fav_series.jpg" alt="Best Series">
+                        <figcaption>24/7 Rewatch</figcaption>
                     </figure>
 
                     <figure class="gallery-photo">
-                        <img src="images/gallery-3.jpg" alt="A favorite place">
-                        <figcaption>my happy place</figcaption>
+                        <img src="images/fav_anime.jpg" alt="Best Anime">
+                        <figcaption>FairyTail do exsits</figcaption>
                     </figure>
 
                     <figure class="gallery-photo">
-                        <img src="images/gallery-4.jpg" alt="A special moment">
-                        <figcaption>favorite people</figcaption>
+                        <img src="images/best_dog.jpg" alt="Best Dog Ever">
+                        <figcaption>Best Dog Ever</figcaption>
                     </figure>
                 </div>
+            </div>
+            
+            <div class="lightbox" id="lightbox" aria-hidden="true">
+                <button class="lightbox-close" id="lightboxClose"
+                    aria-label="Close image">&times;</button>
+                <img id="lightboxImage" src="" alt="">
+                <p id="lightboxCaption"></p>
             </div>
 
          </section>
