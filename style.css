@@ -1181,3 +1181,128 @@ button:hover {
         text-align: center;
     }
 }
+
+/*Mobile*/
+@media (max-width: 768px) {
+
+    .top-header {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 18px 20px;
+        text-align: center;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px 20px;
+        padding: 0;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 55px 22px;
+        gap: 30px;
+    }
+
+    .hero img {
+        max-width: 80%;
+        height: auto;
+    }
+
+    .hero-actions {
+        justify-content: center;
+    }
+
+    #about {
+        padding: 55px 20px;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr !important;
+        gap: 22px;
+    }
+
+    #about .panel {
+        width: 100%;
+        padding: 25px 20px;
+        transform: none;
+    }
+
+    #education {
+        padding: 55px 20px;
+    }
+
+    #education .timeline-item {
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    #education .timeline-card {
+        min-width: 0;
+        width: 100%;
+        padding: 20px;
+    }
+
+    .fav-gallery {
+        padding: 20px 14px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+    }
+
+    /* CONTACT */
+    #contact {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .header {
+        font-size: 21px;
+    }
+
+    .nav-links li a {
+        font-size: 13px;
+    }
+
+    .hero {
+        padding: 40px 18px;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .hero-actions .primary,
+    .hero-actions .secondary {
+        width: 100%;
+        text-align: center;
+    }
+
+    .gallery-grid {
+        gap: 10px;
+    }
+
+    .gallery-photo {
+        padding: 7px 7px 11px;
+    }
+
+    /* Prevent text from overflowing */
+    p, h1, h2, h3 {
+        overflow-wrap: break-word;
+    }
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
