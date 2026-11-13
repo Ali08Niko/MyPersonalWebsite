@@ -1,4 +1,4 @@
-
+// Surprise button
 document.addEventListener("DOMContentLoaded", function() {
 
     const surpriseButton = document.getElementById("surpriseButton");
@@ -52,4 +52,32 @@ document.addEventListener("DOMContentLoaded", function() {
 
     });
 
+});
+
+
+// Music button
+
+
+const music = document.getElementById("backgroundMusic");
+const musicButton = document.getElementById("playMusicBtn");
+
+musicButton.addEventListener("click", async function () {
+
+    if (music.paused) {
+        try {
+            await music.play();
+            musicButton.textContent = "♫ Pause Music";
+        } catch (error) {
+            console.error("Audio error:", error);
+            alert("Unable to play music. Please check your audio file.");
+        }
+    } else {
+        music.pause();
+        musicButton.textContent = "♫ Play a Tune";
+    }
+
+});
+
+music.addEventListener("ended", function () {
+    musicButton.textContent = "♫ Play a Tune";
 });
