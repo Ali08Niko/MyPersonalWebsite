@@ -21,7 +21,7 @@
             </ul>
         </nav>
         <button class="music-btn" id="musicButton" type="Button">♫ Play a tune</button>
-        <audio id="backgroundMusic" controls loop>
+        <audio id="backgroundMusic" loop preload="auto">
             <source src="./audio/background-music.mp3" type="audio/mpeg">
         </audio>
     </header>
@@ -80,6 +80,45 @@
                     </div>
                 </article>
             </div>
+
+            <div class="photo-album-entry">
+                <button class="album-toggle" id="albumToggle" type="button"
+                    aria-expanded="false" aria-controls="photoGallery">
+                    ♡ Open My Photo Album
+                </button>
+                <p class="album-hint">A little collection of moments I want to keep.</p>
+            </div>
+
+            <div class="photo-gallery" id="photoGallery" hidden>
+                <div class="gallery-heading">
+                    <span class="gallery-kicker">A FEW LITTLE MEMORIES</span>
+                    <h3>My Memory Book ♡</h3>
+                    <p>Little snapshots of the things that make me smile.</p>
+                </div>
+
+                <div class="gallery-grid">
+                    <figure class="gallery-photo">
+                        <img src="images/gallery-1.jpg" alt="A favorite memory">
+                        <figcaption>little moments ♡</figcaption>
+                    </figure>
+
+                    <figure class="gallery-photo">
+                        <img src="images/gallery-2.jpg" alt="A fun day or outing">
+                        <figcaption>days to remember</figcaption>
+                    </figure>
+
+                    <figure class="gallery-photo">
+                        <img src="images/gallery-3.jpg" alt="A favorite place">
+                        <figcaption>my happy place</figcaption>
+                    </figure>
+
+                    <figure class="gallery-photo">
+                        <img src="images/gallery-4.jpg" alt="A special moment">
+                        <figcaption>favorite people</figcaption>
+                    </figure>
+                </div>
+            </div>
+
          </section>
 
          <section class="section" id="education">

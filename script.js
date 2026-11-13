@@ -58,26 +58,65 @@ document.addEventListener("DOMContentLoaded", function() {
 // Music button
 
 
-const music = document.getElementById("backgroundMusic");
-const musicButton = document.getElementById("playMusicBtn");
+document.addEventListener("DOMContentLoaded", function () {
 
-musicButton.addEventListener("click", async function () {
+    const music = document.getElementById("backgroundMusic");
+    const musicButton = document.getElementById("musicButton");
 
-    if (music.paused) {
-        try {
-            await music.play();
-            musicButton.textContent = "♫ Pause Music";
-        } catch (error) {
-            console.error("Audio error:", error);
-            alert("Unable to play music. Please check your audio file.");
-        }
-    } else {
-        music.pause();
-        musicButton.textContent = "♫ Play a Tune";
+    if (!music || !musicButton) {
+        console.error("Music button or audio element was not found!");
+        return;
     }
 
-});
+    music.volume = 0.35;
 
-music.addEventListener("ended", function () {
-    musicButton.textContent = "♫ Play a Tune";
+    musicButton.addEventListener("click", async function () {
+
+        if (music.paused) {
+            try {
+                await music.play();
+
+                musicButton.textContent = "♫ Pause Music";
+                console.log("Music is playing!");
+
+            } catch (error) {
+                console.error("Music playback failed:", error);
+
+                musicButton.textContent = "♫ Unable to Play";
+                alert("Unable to play music. Please check your audio file and file path.");
+            }
+
+        } else {
+            music.pause();
+            musicButton.textContent = "♫ Play a Tune";
+        }
+
+    });
+
+    music.addEventListener("ended", function () {
+        musicButton.textContent = "♫ Play a Tune";
+    });
+
+    music.addEventListener("error", function () {
+        console.error("Audio file could not be loaded:", music.error);
+    });
+
+    const albumToggle = document.getElementById("albumToggle");
+    const photoGallery = document.getElementById("photoGallery");
+
+    if (albumToggle && photoGallery) {
+        albumToggle.addEventListener("click", function () {
+
+            const isOpening = photoGallery.hidden;
+
+            photoGallery.hidden = !isOpening;
+
+            albumToggle.setAttribute("aria-expanded", String(isOpening));
+
+            albumToggle.textContent = isOpening
+                ? "♡ Close My Photo Album"
+                : "♡ Open My Photo Album";
+        });
+    }
+
 });
